@@ -69,9 +69,9 @@ func (sa *SensorsAnalytics) track(etype, event, distinctId, originId string, pro
 	//	data.TimeFree = true
 	//}
 
-	//if isLoginId {
-	//	properties["$is_login_id"] = true
-	//}
+        if isLoginId {
+		properties["$is_login_id"] = true
+	}
 
 	err := data.NormalizeData()
 	if err != nil {
